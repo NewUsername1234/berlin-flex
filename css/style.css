@@ -6,7 +6,7 @@
 
 body {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     flex-basis: 100vw;
     width: 100vw;
 }
@@ -170,6 +170,7 @@ main {
 footer {
     display: flex;
     align-items: center;
+    flex-basis: 100%;;
     height: 60px;
     background-color: #666666;
     color: rgb(210, 210, 210);
@@ -245,5 +246,5 @@ footer p span {
     main .banner .overlay h1, main .banner .overlay a {
         font-size: 6vw;
     }
-    
+
 }
