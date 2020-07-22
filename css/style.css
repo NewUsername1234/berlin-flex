@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-basis: 100%;
+}
+
+header {
+    height: 80px;
+}
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    position: fixed;
+    z-index: 1;
+    width: 100%; 
+    height: 80px;
+    background-color: white;   
+}
+
+nav .logo {
+    height: 100%;
+}
+
+nav .logo img {
+    height: 100%;
+} 
+
+nav .nav-items {
+    display: flex;
+    margin-right: 10px;
+}
+
+nav .nav-items a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #59595b;
+    padding: 0 10px;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+nav .nav-items a:hover {
+    color: #ec2131;
+}
+
+nav .burger, nav .burger img, nav input {
+    cursor: pointer;
+    height: 80px;
+    display: none;
+    margin-right: 10px;
+}
+
+nav input:checked + .burger-items{
+    margin-left: 0;
+}
+
+nav .burger-items {
+    display: flex;
+    margin-left: 100%;
+    flex-flow: row wrap;
+    flex-basis: 100%;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+nav .burger-items a{
+    flex-basis: 100%;
+    text-align: center;
+    text-decoration: none;
+    background-color: #59595b;;
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+nav .burger-items a:hover {
+    color: #ec2131;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+
+.banner {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img {
+    filter: brightness(80%);
+}
+
+.banner .overlay {
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+ 
+.banner  h1 {
+    flex-basis: 100%;
+    text-align: center;
+    color: white;
+    font-size: 3vw;
+    padding: 2vw;
+}
+
+.banner a {
+    background-color: gold;
+    text-decoration: none;
+    font-size: 2vw;
+    padding: 0.1vw 5vw;
+    color: chocolate;
+    border: 2px solid chocolate;
+    border-radius: 50px;
+}
+
+.attributes {
+    background-color: #cccccc;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px 0;
+}
+
+.attributes .attribute {
+    display: flex;
+    align-items: center;
+    flex-basis: calc(50% - 100px);
+    margin: 50px 50px;
+}
+
+.attribute img{ 
+    height: 64px;
+    margin-right: 10px;
+    flex-basis: 10%
+  
+}
+
+.attributes .text {
+    text-align: left;
+    flex-basis: 60%
+}
+
+
+
+footer {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: #666666;
+    color: rgb(210, 210, 210);
+    font-size: 1.5rem;
+}
+
+footer i {
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+footer p {
+    display: inline-block;
+}
+
+footer p span {
+    font-size: 1rem;
+}
+
+
+@media only screen and (max-width: 1199px){
+
+    nav .nav-items {
+        display: none;
+    }
+
+    nav .burger, nav .burger img {
+        display: inline;
+    }
+
+    main .banner .overlay h1 {
+        font-size: 36px;
+    }
+
+    main .banner .overlay a {
+        font-size: 24px;
+    }
+
+    .attributes .attribute {
+    
+        flex-basis: 100%;
+        justify-content: center;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 767px){
+
+    main .banner .overlay h1 {
+        font-size: 24px;
+    }
+
+    main .banner .overlay a {
+        font-size: 18px;
+    }
+
+
+}
+
+@media only screen and (max-width: 375px){
+
+    nav .logo, nav .burger {
+        display: flex;
+        align-items: center;
+    }
+
+    nav .logo img, nav .burger img {
+        height: 20vw;
+    }
+
+    main .banner .overlay h1, main .banner .overlay a {
+        font-size: 6vw;
+    }
+}
