@@ -103,6 +103,7 @@ main {
 
 .banner img {
     filter: brightness(80%);
+    width: 100vw;
 }
 
 .banner .overlay {
